@@ -9,14 +9,14 @@
   text-align: left;
 }
 
-.card > .img-container {
-  height: 60%;
+.img-container {
+  height: 20%;
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
 }
-.card > .img-container > img {
-  width: 60%
+.img-container > img {
+  width: 20%
 }
 
 .card > .content {
@@ -33,7 +33,7 @@
   margin-top: 18px;
 }
 
-.card > .remove {
+.remove {
   color: #ff1744;
   font-size: 48px;
   position: absolute;
@@ -42,6 +42,6 @@
   cursor: pointer;
 }
 
-.card > .remove:hover {
+.remove:hover {
   color: #d50000;
 }
