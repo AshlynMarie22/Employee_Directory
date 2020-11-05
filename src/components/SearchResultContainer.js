@@ -60,7 +60,7 @@ class SearchResultContainer extends Component {
     this.setState({ employees });
   };
 
-  sortByName = () => {
+  sortByName = event => {
     const compare = (a, b) => {
       if (this.state.ascending) {
         if (a.name.first > b.name.first) return 1;
@@ -86,14 +86,24 @@ class SearchResultContainer extends Component {
   render() {
     return (
       <>
-        <Title>Employee List</Title>
+        <Title>Employee Directory</Title>
         <SearchForm
           search={this.state.search}
-          handleFormSubmit={this.handleFormSubmit}
+          // handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         ></SearchForm>
         <Wrapper>
-          <EmployeeHeader></EmployeeHeader>
+        {/* <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col" onClick={this.sortByName}>Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Remove</th>
+    </tr>
+  </thead> */}
+          <EmployeeHeader > </EmployeeHeader>
 
           <tbody>
             {this.state.alteredResult.map((employee) => (

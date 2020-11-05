@@ -1,29 +1,3 @@
-// import React from "react";
-
-// function SearchForm(props) {
-//   return (
-//     <form>
-//       <div className="form-group">
-//         <label htmlFor="search">Search:</label>
-//         <input
-//           onChange={props.handleInputChange}
-//           // value={props.search}
-//           name="search"
-//           type="text"
-//           className="form-control"
-//           placeholder="Search for a Gif"
-//           id="search"
-//         />
-//         <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-//           Search
-//         </button>
-//       </div>
-//     </form>
-//   );
-// }
-
-// export default SearchForm;
-
 import React from 'react';
 
 const SearchForm = (props) => {
@@ -34,7 +8,6 @@ const SearchForm = (props) => {
           name="search"
           style={searchStyle}
           placeholder="Search"
-        //   value={this.props.search}
           onChange={props.handleInputChange}
         />
         </form>
@@ -44,6 +17,7 @@ const SearchForm = (props) => {
 const formStyle = {
     background: '#f4f4f4',
     padding: "10px", 
+    marginBottom: "50px",
 }
 
 const searchStyle = {
