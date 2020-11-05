@@ -6,11 +6,11 @@ function EmployeeCard(props) {
 
 
     <tr>
-      <th scope="row">{props.id}</th>
       <td className="img-container"><img alt={props.name} src={props.image} /></td>
-      <td>{props.name}</td>
-      <td>{props.occupation}</td>
-      <td>{props.location}</td>
+      <td>{props.name.first + ' ' + props.name.last}</td>
+      <td>{props.phone}</td>
+      <td>{props.email}</td>
+      <td>{props.dob}</td>
       <td><span onClick={() => props.removeEmployee(props.id)} className="remove">
         𝘅
       </span></td>
