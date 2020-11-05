@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import SearchForm from "./Search/SearchForm.js";
-// import ResultList from "../Not Now/ResultList";
 import API from "../utils/API";
 import EmployeeCard from "./EmployeeCard";
 import Wrapper from "./Wrapper";
 import Title from "./Title";
-import EmployeeHeader from "./Header";
 
 class SearchResultContainer extends Component {
   state = {
@@ -60,7 +58,7 @@ class SearchResultContainer extends Component {
     this.setState({ employees });
   };
 
-  sortByName = event => {
+  sortByName = (event) => {
     const compare = (a, b) => {
       if (this.state.ascending) {
         if (a.name.first > b.name.first) return 1;
@@ -93,17 +91,18 @@ class SearchResultContainer extends Component {
           handleInputChange={this.handleInputChange}
         ></SearchForm>
         <Wrapper>
-        {/* <thead>
-    <tr>
-      <th scope="col">Image</th>
-      <th scope="col" onClick={this.sortByName}>Name</th>
-      <th scope="col">Phone Number</th>
-      <th scope="col">Email</th>
-      <th scope="col">Date of Birth</th>
-      <th scope="col">Remove</th>
-    </tr>
-  </thead> */}
-          <EmployeeHeader > </EmployeeHeader>
+          <thead>
+            <tr>
+              <th scope="col">Image</th>
+              <th scope="col" onClick={this.sortByName}>
+                Name
+              </th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
 
           <tbody>
             {this.state.alteredResult.map((employee) => (
